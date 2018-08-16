@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+            <style>
+                body {font-family: "Lato", sans-serif;}
+                
+                .tablink {
+                    background-color: #555;
+                    color: white;
+                    float: left;
+                    border: none;
+                    outline: none;
+                    cursor: pointer;
+                    padding: 14px 16px;
+                    font-size: 17px;
+                    width: 25%;
+                }
+            
+            .tablink:hover {
+                background-color: #777;
+            }
+            
+            /* Style the tab content */
+            .tabcontent {
+                color: white;
+                display: none;
+                padding: 50px;
+                text-align: center;
+            }
+            
+            #Boracay {background-color:red;}
+            #Paris {background-color:green;}
+            #Tokyo {background-color:blue;}
+            #Oslo {background-color:orange;}
+                </style>
+    </head>
+    <body>
+        
+        <p>Click on the buttons inside the tabbed menu:</p>
+        
+        <div id="Boracay" class="tabcontent">
+            <h3>Boracay</h3>
+            <p>Boracay is one of the main attractions in the Philippines</p>
+        </div>
+        
+        <div id="Basketball" class="tabcontent">
+            <h3>Basketball</h3>
+            <p>Basketball is one the main sports that is played in the Philippines</p>
+        </div>
+        
+        <div id="Philippines" class="tabcontent">
+            <h3>Philippines</h3>
+            <p>Let us learn about the three main islands that comprises the Philippines</p>
+        </div>
+        
+        <div id="Manila" class="tabcontent">
+            <h3>Manila</h3>
+            <p>Let's look into the rich culture and sights that Manila has to offer'</p>
+        </div>
+        
+        <div id="Why the Philippines is special" class="tabcontent">
+            <h3>Whhat makes it special</h3>
+            <p>Let's look into the rich culture and sights that Manila has to offer'</p>
+        </div>
+        
+        <div id="tabs">
+            <div id="Boracay">
+                <a href="Boracay.html">1</a>
+                <a href="Basketball.html">2</a>
+                <a href="Manila.html">3</a>
+                <a href="Philippines.html">4</a>
+                <a href="Why the Philippines is special.html">5</a>
+            </div>
+        
+        <button class="tablink" onclick="openCity('Boracay', this, 'red')" id="defaultOpen">Boracay</button>
+        <button class="tablink" onclick="openCity('Basketball', this, 'green')">Basketball</button>
+        <button class="tablink" onclick="openCity('Philippines', this, 'blue')">Philippines</button>
+        <button class="tablink" onclick="openCity('Manila', this, 'orange')">Manila</button>
+        <button class="tablink" onclick="openCity('What makes the Philippines special', this, 'yellow')">Special Philippines</button>
+        
+        <script>
+            function openCity(cityName,elmnt,color) {
+                var i, tabcontent, tablinks;
+                tabcontent = document.getElementsByClassName("tabcontent");
+                for (i = 0; i < tabcontent.length; i++) {
+                    tabcontent[i].style.display = "none";
+                }
+                tablinks = document.getElementsByClassName("tablink");
+                for (i = 0; i < tablinks.length; i++) {
+                    tablinks[i].style.backgroundColor = "";
+                }
+                document.getElementById(cityName).style.display = "block";
+                elmnt.style.backgroundColor = color;
+                
+            }
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+            </script>
+        
+    </body>
+</html> 
