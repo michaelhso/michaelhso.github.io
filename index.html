@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="Style.css" rel="stylesheet" type="text/css">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
             <style>
                 body {font-family: "Lato", sans-serif;}
                 
@@ -34,9 +35,8 @@
             #Tokyo {background-color:blue;}
             #Oslo {background-color:orange;}
                 </style>
-    </head>
+            </head>
     <body>
-        
         <p>Click on the buttons inside the tabbed menu:</p>
         
         <div id="Boracay" class="tabcontent">
@@ -72,31 +72,33 @@
                 <a href="Philippines.html">4</a>
                 <a href="Why the Philippines is special.html">5</a>
             </div>
-        
-        <button class="tablink" onclick="openCity('Boracay', this, 'red')" id="defaultOpen">Boracay</button>
-        <button class="tablink" onclick="openCity('Basketball', this, 'green')">Basketball</button>
-        <button class="tablink" onclick="openCity('Philippines', this, 'blue')">Philippines</button>
-        <button class="tablink" onclick="openCity('Manila', this, 'orange')">Manila</button>
-        <button class="tablink" onclick="openCity('What makes the Philippines special', this, 'yellow')">Special Philippines</button>
-        
-        <script>
-            function openCity(cityName,elmnt,color) {
-                var i, tabcontent, tablinks;
-                tabcontent = document.getElementsByClassName("tabcontent");
-                for (i = 0; i < tabcontent.length; i++) {
-                    tabcontent[i].style.display = "none";
+            
+            <button class="tablink" onclick="openCity('Boracay', this, 'red')" id="defaultOpen">Boracay</button>
+            <button class="tablink" onclick="openCity('Basketball', this, 'green')">Basketball</button>
+            <button class="tablink" onclick="openCity('Philippines', this, 'blue')">Philippines</button>
+            <button class="tablink" onclick="openCity('Manila', this, 'orange')">Manila</button>
+            <button class="tablink" onclick="openCity('What makes the Philippines special', this, 'yellow')">Special Philippines</button>
+            
+            <script>
+                function openCity(cityName,elmnt,color) {
+                    var i, tabcontent, tablinks;
+                    tabcontent = document.getElementsByClassName("tabcontent");
+                    for (i = 0; i < tabcontent.length; i++) {
+                        tabcontent[i].style.display = "none";
+                    }
+                    tablinks = document.getElementsByClassName("tablink");
+                    for (i = 0; i < tablinks.length; i++) {
+                        tablinks[i].style.backgroundColor = "";
+                    }
+                    document.getElementById(cityName).style.display = "block";
+                    elmnt.style.backgroundColor = color;
+                    
                 }
-                tablinks = document.getElementsByClassName("tablink");
-                for (i = 0; i < tablinks.length; i++) {
-                    tablinks[i].style.backgroundColor = "";
-                }
-                document.getElementById(cityName).style.display = "block";
-                elmnt.style.backgroundColor = color;
-                
-            }
-        // Get the element with id="defaultOpen" and click on it
-        document.getElementById("defaultOpen").click();
-            </script>
-        
-    </body>
+            // Get the element with id="defaultOpen" and click on it
+            document.getElementById("defaultOpen").click();
+                </script>
+            
+            
+            
+            </body>
 </html> 
